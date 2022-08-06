@@ -1,0 +1,153 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+/* HEADER */
+
+header {
+	height: 82vh;
+	background-image: url(./assets/img/asd.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.logo {
+	margin: 5px;
+	border-radius: 10%;
+	height: 10vh;
+	border: 1px solid grey;
+}
+
+.social {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-right: 8px;
+	margin-top: -70px;
+}
+
+/* CONTENEDOR ACERCA DE */
+
+.about {
+	margin: 10px;
+	padding: 10px;
+	background: #E2E3DD;
+	text-align: center;
+	font-family: 'Khand', sans-serif;
+}
+
+.titulito{
+	font-size: 1.4em;
+	text-align: center;
+	margin: auto;
+	margin-top: 20px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+/* CONTENEDOR EXPERIENCIA */
+
+.cont-exp {
+	margin: 10px;
+}
+
+.cont-cards {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.line {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 2px;
+	background: #000;
+	margin-bottom: 60px;
+}
+
+/* CONTENEDOR EDUCACION */
+
+.cont-educ {
+	margin: 10px;
+}
+
+/* CONTENEDOR SKILLS */
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-family: 'Khand', sans-serif;
+	flex-direction: column;
+	margin-right: 2em;
+}
+
+.cont-skills {
+	margin-bottom: 20px;
+}
+
+.n-skills {
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 1.5em;
+}
+
+/* CONTENEDOR PROYECTO */
+
+.cont-proyecto {
+	margin: 10px;
+}
+
+.cont-proyecto h3 {
+	margin: 5px;
+}
+
+/* FOOTER */
+
+footer {
+	background:rgb(20,29,72);
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+}
+
+footer p {
+	margin: auto;
+	color: #fff;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 400px) {
+	.skills {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	#footer2 {
+		margin: auto;
+	}
+	.n-skills {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 860px) {
+  .about {
+	width: 100%;
+	}
+	.titulito {
+		font-size: 1em;
+	}
+}

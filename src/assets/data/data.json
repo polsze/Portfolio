@@ -1,0 +1,95 @@
+{	
+
+	"stackoverflow": "https://es.stackoverflow.com/users/287490/pablo-barrios",
+	"linkedin": "https://www.linkedin.com/in/pablo-barrios-2ba888231/",
+	"name": "Pablo Barrios",
+	"bgimg": "./assets/img/polu.png",
+	"aboutme": "Estudiante de Desarrollo Web Full Stack en Argentina Programa.",
+
+	"experience": [
+		{
+			"imgexp":"./assets/img/doble.png",
+			"company":"Doble 5inco",
+			"position":"Periodista",
+			"tasks":"Locutor, coberturas de campo, redacción.",
+			"start":"2014",
+			"end":"2017",
+			"link":"https://www.facebook.com/doble5inco/"
+
+		},
+		{
+			"imgexp":"./assets/img/nestle.png",
+			"company":"Nestlé S.A",
+			"position":"Vendedor viajante",
+			"tasks":"Atención a clientes en zonas preasignadas.",
+			"start":"2017",
+			"end":"2019",
+			"link":"https://www.nestle.com.ar/"
+
+		},
+		{
+			"imgexp":"./assets/img/mundo.png",
+			"company":"Joyería",
+			"position":"Vendedor de salón",
+			"tasks":"Encargado de la atención al cliente y ventas.",
+			"start":"2019",
+			"end":"2021",
+			"link":"https://www.facebook.com/El-Mundo-de-las-Joyas-150037751734761/"
+		}
+	],
+
+	"education": [
+		{
+			"imgeduc":"./assets/img/saavedra.png",
+			"institute":"Saavedra",
+			"title":"Periodismo",
+			"start":"2012",
+			"end":"2015"
+		},
+		{
+			"imgeduc":"./assets/img/argprog.png",
+			"institute":"CESSI",
+			"title":"Desarrollo Web Full Stack",
+			"start":"2021",
+			"end":"Actualidad"
+		}
+	],
+	"skills": [
+		{
+			"type":"Resolución",
+			"lvl": 50
+		},
+
+		{
+			"type":"Investigación",
+			"lvl": 75
+		},
+
+		{
+			"type":"Codificación",
+			"lvl": 50
+		},
+		{
+			"type":"HTML",
+			"lvl": 75
+		},
+		{
+			"type":"CSS",
+			"lvl": 50
+		},
+		{
+			"type":"JS",
+			"lvl": 25
+		}
+
+	],
+	
+		
+	"projectcompany":"Urban Paint",
+	"projectdescription":"Construyendo la Web de un pintor artístico profesional",
+	"linkpr":"",
+		
+
+	"footerdescription":"Portfolio personal de Pablo Barrios, estudiante de la capacitación de Argentina Programa 2022."
+	
+}

@@ -1,0 +1,21 @@
+ <section class="educacion">
+    <div class="cont-educ">
+      <h3 class="titulito" style="margin-bottom: 50px;">Educación</h3>
+      <div class="cont-cards">
+        <ul>
+            <li *ngFor="let educacion of educationList" style="list-style: none; display: inline-block; margin: 5px;">
+        <div class="card" style="width: 18rem;">
+          <img [src]="educacion.imgeduc" class="card-img-top" alt="Saavedra">
+        <div class="card-body" id="letras">
+            <h5 class="card-title" style="font-family: 'Goldman', cursive;">{{educacion.institute}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Goldman', cursive;">{{educacion.title}}</h6>
+            <p class="card-text" style="font-family: 'Goldman', cursive;"><time>{{educacion.start}}</time>- <time>{{educacion.end}}</time></p>
+            <a href="https://ariasdesaavedra.edu.ar/" class="btn btn-primary" target="_BLANK">Ir a</a>
+          </div>
+        </div>
+       </li>
+     </ul>
+      </div>  
+    </div>
+  </section>
+  <div class="line"></div> 
