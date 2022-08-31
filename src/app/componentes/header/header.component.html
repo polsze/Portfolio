@@ -1,10 +1,15 @@
 <header>
-      <img src="./assets/img/argprograma.png" class="logo" alt="logoargprog">
+    <img src="./assets/img/argprograma.png" class="logo" alt="logoargprog" style="height: 85px;">
     <div class="social">
-      <form action="http://localhost:8080/login/login.php">
-      <button type="submit" class="btn btn-success">Login</button>
-      </form>
-      <a [href]="miPortfolio?.stackoverflow" target="_BLANK"><i class='bx bxl-stack-overflow' style="color: white; font-size: 2.3em;"></i></a>
-      <a [href]="miPortfolio?.linkedin" target="_BLANK"><i class='bx bxl-linkedin' style="color: white; font-size: 2.3em;"></i></a>
+        
+        <button id="boton" type="submit" class="btn btn-light" type="button" (click)="login()" *ngIf="!isLogged" id="btnexp" style="color: #000; font-family: 'Gloria Hallelujah', cursive;">Login</button>
+        <button id="boton" type="submit" class="btn btn-light" type="button" (click)="onLogout()" *ngIf="isLogged" id="btnexp" style="color: #000; font-family: 'Gloria Hallelujah', cursive;">Log out</button>
+        
+        
+        <div id="logoshead">
+            <a href="https://stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fstackoverflow.com%2f" target="_BLANK" ><i class='bx bxl-stack-overflow' style="color: white; font-size: 2.3em;"></i></a>
+            <a href="https://www.linkedin.com/checkpoint/lg/sign-in-another-account" target="_BLANK" ><i class='bx bxl-linkedin' style="color: white; font-size: 2.3em;"></i></a>
+        </div>
     </div>
+    
 </header>

@@ -1,21 +1,28 @@
 <section class="experiencia">
-    <div class="cont-exp">
-        <h3 class="titulito" style="margin-top: 50px; margin-bottom: 50px;">Experiencia</h3>
-        <div class="cont-cards">
-          <ul>
-          <li *ngFor="let experiencia of experienceList" style="list-style: none; display: inline-block; margin: 5px;">
-          <div class="card" style="width: 18rem;">
-            <img [src]="experiencia.imgexp" class="card-img-top" alt="explaboral">
-            <div class="card-body" id="letras">
-              <h5 class="card-title" style="font-family: 'Goldman', cursive;">{{experiencia.company}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Goldman', cursive;">{{experiencia.position}}</h6>
-              <p class="card-text" style="font-family: 'Goldman', cursive;">{{experiencia.tasks}}<br> <time>{{experiencia.start}}</time> - <time>{{experiencia.end}}</time></p>
-              <a [href]="experiencia.link" class="btn btn-primary" target="_BLANK">Ir a</a>
-            </div>
-            </div>
-          </li>
-          </ul> 
-        </div>
+  <div class="cont-exp">
+    <h3 class="titulito" style="margin-top: 50px; margin-bottom: 50px;">Experiencia</h3>
+    <div style="text-align: center;" class="btnexp">
+      <button type="button" class="btn btn-dark" id="btnexp" routerLink="/nuevaexp" *ngIf="isLogged" style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; ">
+      Nueva experiencia
+      </button>
     </div>
-  </section>
-  <div class="line"></div>
+    <div class="col-lg-2">
+    </div>
+    <div class="cont-cards">
+      <ul>
+        <li *ngFor="let Experiencia of expe" style="list-style: none; display: inline-block; margin: 5px;">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body" id="letras">
+              <a routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged" class="aedit"><i class="bi bi-pencil" style="position: absolute; left: 15.5em"></i></a><a (click)="delete(Experiencia.id)" *ngIf="isLogged" ><i class="bi bi-trash3" id="itrash" style="position: absolute; left: 14em"></i></a>
+              <h5 class="card-title" style="font-family: 'Goldman', cursive;">{{Experiencia.nombreE}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Goldman', cursive;">{{Experiencia.descripcionE}}</h6>
+              <p class="card-text" style="font-family: 'Goldman', cursive;"><br> <time></time> {{Experiencia.fechaE}} <time></time></p>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="line"></div>

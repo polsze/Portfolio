@@ -1,18 +1,30 @@
 <section class="proyecto">
-    <div class="cont-proyecto">
-        <h3 class="titulito" style="margin-bottom: 50px;">Proyecto</h3>
-      <div class="card text-center">
-        <div class="card-header">
-    
-      </div>
-    <div class="card-body" id="letras">
-          <h5 class="card-title" style="font-family: 'Goldman', cursive;">{{miPortfolio?.projectcompany}}</h5>
-          <p class="card-text" style="font-family: 'Goldman', cursive;">{{miPortfolio?.projectdescription}}</p>
-          <a [href]="miPortfolio?.linkpr" class="btn btn-primary" target="_BLANK">Ir a</a>
-      </div>
-    <div class="card-footer text-muted">
-      </div>
+  <div class="cont-proyecto">
+    <h3 class="titulito" style="margin-bottom: 50px;">Proyecto</h3>
+    <div style="text-align: center;" class="btnexp">
+      <button type="button" class="btn btn-dark" id="btnexp" *ngIf="isLogged" routerLink="/nuevopro" style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-bottom: 15px; ">
+      Nuevo proyecto
+      </button>
     </div>
+    <div class="card text-center">
+      <div class="card-header">
+        
+      </div>
+      <ul>
+        <li *ngFor="let Proyecto of proy"style="list-style: none; display: inline-block; margin: 5px;">
+          <div class="card-body" id="letras">
+            
+            <h5 class="card-title" style="font-family: 'Goldman', cursive;">{{Proyecto.nombrePro}}</h5>
+            <p class="card-text" style="font-family: 'Goldman', cursive;">{{Proyecto.descripcionPro}}</p>
+            <a [href]="Proyecto.linkPro" class="btn btn-primary" target="_BLANK">Ir a</a>
+            <br>
+            <a routerLink="/editpro/{{Proyecto.id}}" *ngIf="isLogged" class="aedit"><i class="bi bi-pencil" style="margin-right: 5px;"></i></a><a (click)="delete(Proyecto.id)" *ngIf="isLogged" ><i class="bi bi-trash3" id="itrash" style=""></i></a>
+          </div>
+          <div class="card-footer text-muted">
+          </div>
+        </li>
+      </ul>
     </div>
-  </section>
-  <div class="line1"></div>
+  </div>
+</section>
+<div class="line1"></div>

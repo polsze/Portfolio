@@ -84,10 +84,14 @@
 
 	],
 	
+	"projects":[
+		{
+			"projectcompany":"Urban Paint",
+			"projectdescription":"Construyendo la Web de un pintor artístico profesional",
+			"linkpr":""
+		}
 		
-	"projectcompany":"Urban Paint",
-	"projectdescription":"Construyendo la Web de un pintor artístico profesional",
-	"linkpr":"",
+	],
 		
 
 	"footerdescription":"Portfolio personal de Pablo Barrios, estudiante de la capacitación de Argentina Programa 2022."

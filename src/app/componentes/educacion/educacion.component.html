@@ -1,21 +1,26 @@
- <section class="educacion">
-    <div class="cont-educ">
-      <h3 class="titulito" style="margin-bottom: 50px;">Educación</h3>
-      <div class="cont-cards">
-        <ul>
-            <li *ngFor="let educacion of educationList" style="list-style: none; display: inline-block; margin: 5px;">
-        <div class="card" style="width: 18rem;">
-          <img [src]="educacion.imgeduc" class="card-img-top" alt="Saavedra">
-        <div class="card-body" id="letras">
-            <h5 class="card-title" style="font-family: 'Goldman', cursive;">{{educacion.institute}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Goldman', cursive;">{{educacion.title}}</h6>
-            <p class="card-text" style="font-family: 'Goldman', cursive;"><time>{{educacion.start}}</time>- <time>{{educacion.end}}</time></p>
-            <a href="https://ariasdesaavedra.edu.ar/" class="btn btn-primary" target="_BLANK">Ir a</a>
-          </div>
-        </div>
-       </li>
-     </ul>
-      </div>  
+<section class="educacion">
+  <div class="cont-educ">
+    <h3 class="titulito" style="margin-bottom: 50px;">Educación</h3>
+    <div style="text-align: center;">
+      <button type="button" class="btn btn-dark btn-" id="btnexp" routerLink="/nuevaedu" *ngIf="isLogged " style="--bs-btn-padding-y: .15rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; ">
+      Nueva educación
+      </button>
     </div>
-  </section>
-  <div class="line"></div> 
+    <div class="cont-cards">
+      <ul>
+        <li  *ngFor="let Educacion of educa" style="list-style: none; display: inline-block; margin: 5px;">
+          <div class="card" style="width: 18rem;">
+            
+            <div class="card-body" id="letras">
+              <a routerLink="/editedu/{{Educacion.id}}" *ngIf="isLogged" class="aedit"><i class="bi bi-pencil" style="position: absolute; left: 15.5em;" ></i></a><a (click)="delete(Educacion.id)" *ngIf="isLogged" ><i class="bi bi-trash3" id="itrash" style="position: absolute; left: 14em;"></i></a>
+              <h5 class="card-title" style="font-family: 'Goldman', cursive;">{{Educacion.nombreEdu}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted" style="font-family: 'Goldman', cursive;">{{Educacion.descripcionEdu}}</h6>
+              <p class="card-text" style="font-family: 'Goldman', cursive;"><time></time>{{Educacion.fechaEdu}} <time></time></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="line"></div>

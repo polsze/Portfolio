@@ -49,6 +49,7 @@ header {
 	font-family: 'Press Start 2P', cursive;
 }
 
+
 /* CONTENEDOR EXPERIENCIA */
 
 .cont-exp {
@@ -61,6 +62,39 @@ header {
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+#btnexp {
+	color: #fff;
+	border-radius: 40px;
+	box-shadow: 0 0 0 0 rgba(145, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	overflow: hidden;
+}
+
+#btnexp::after{
+	content: "";
+	position: absolute;
+	background: #13ff13;
+	width: 400px;
+	height: 400px;
+	top: -50px;
+	left: -100px;
+	background-image: linear-gradient(-255deg, #231557 0%, #44107A 29%, #FF1361 67%, #fff800 100%);
+	z-index: -1;
+	transition: transform 0.5s ease;
+}
+
+#btnexp:hover {
+	transform: translate(0, -6px);
+	box-shadow: 10px -10px 25px 0 rgba(16, 226, 255, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.7);
+}
+
+#btnexp:hover::after{
+	transform: rotate(150deg);
+}
+
+#btnexp:hover::before{
 }
 
 .line {
@@ -76,6 +110,18 @@ header {
 
 .cont-educ {
 	margin: 10px;
+}
+
+#itrash:hover {
+	color: #F71906;
+}
+
+.aedit:hover {
+	color: #008000;
+}
+
+.aedit {
+	color: #000;
 }
 
 /* CONTENEDOR SKILLS */
@@ -144,10 +190,40 @@ footer p {
 }
 
 @media screen and (max-width: 860px) {
-  .about {
-	width: 100%;
-	}
 	.titulito {
 		font-size: 1em;
 	}
+
+	* {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width 420px) {
+	form {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+/* Login */
+
+.inputs {
+	outline: none;
+	border: none;
+}
+
+
+#logoshead {
+	display: block;
+}
+
+.btnvolver {
+	text-decoration: none;
+	color: #F73208;
+	font-weight: 800;
+	font-size: 1.3em;
+}
+.btnvolver:hover {
+	color: #1AC818;
 }

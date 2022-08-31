@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PersonaService } from 'src/app/servicios/persona.service'
+
+
+import { persona } from 'src/app/model/persona.model'
+
+
+
+
 
 
 @Component({
@@ -8,13 +15,12 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent implements OnInit {
-miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  persona: persona = new persona("","","","");
+  constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.miPortfolio=data;
-    });
+     this.personaService.getPersona().subscribe(data => {
+       this.persona=data;
+     })
+    }
   }
-
-}
